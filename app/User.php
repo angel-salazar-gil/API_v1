@@ -11,6 +11,10 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $primaryKey = 'user_user';
+
+    protected $table = 'tusers';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -37,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getAuthPassword()
+    {
+        return $this->user_password;
+    }
 }
