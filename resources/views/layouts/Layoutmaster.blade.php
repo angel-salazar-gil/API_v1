@@ -154,6 +154,9 @@
 						</div>
 					</div>
 				</div>
+				<div class="page-inner mt--5">
+					@yield('content')
+				</div>
 			</div>
 			<footer class="footer">
 				<div class="container-fluid">

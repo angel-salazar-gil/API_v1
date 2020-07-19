@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Dependencias
+Route::resource('/dependencias', 'DependenciasController')->except(['show']);
